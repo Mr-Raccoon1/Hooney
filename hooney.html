@@ -1,0 +1,181 @@
+# Hooney
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my love</title>
+
+    <link rel="icon" href="https://i.postimg.cc/66crKHcB/descarga.jpg" type="image/png"> 
+    <div id="player"></div> <!-- musica-->
+    <!--pruebla de java-->
+    <script>
+      let video = ["https://youtu.be/EH1_UqlmAYE?si=ShyauXMfBFAUBdYL", "", ""]
+      let index =0;
+     player.setVolume(50); // 50% de volumen
+
+      let tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag)
+
+      let player;
+      function onYouTubeIframeAPIReady(){
+        player=new YT.Player('player', {
+          height: '0',
+          width:'0',
+          videoId: video[index],
+          events: {
+            ' onStateChange': onPlayerStateChange
+          },
+          playerVars:{
+            'autoplay': 1,
+            'controls': 0,
+            'rel': 0,
+            'loop': 0
+
+          }
+
+        });
+      }
+      function onPlayerStateChange(event){
+        if(event.date === YT.playerState.ENDED){
+          index++;
+          if(index >= video.length) index = 0;
+          player.loadVideoById(videos[index]);
+        }
+      }
+    </script>
+ <style>
+ body { 
+  background-image: url(https://i.pinimg.com/736x/ed/29/d3/ed29d38d0377abaa772934f10740e340.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+   
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 5px;
+    }
+    span {
+      transition: transform 0.3s;
+     display: inline-block;
+     
+    }
+    span{
+      line-height: 0.9;
+    }
+    span:active{
+      transform:scale(1.3);
+      -webkit-text-stroke: 2px white;
+      text-shadow: 0 0 10px white, 0 0 20px white;
+     
+
+    }/*prueba de corte */
+     span:nth-child(even) {
+      transform: rotate(2deg);
+     }
+     span:nth-child(odd){
+      transform: rotate(-3deg);
+     }
+     /*recorte iregylar*/
+     span:nth-child(4n +1 ) {
+      clip-path: polygon(0 0, 95% 3%, 100% 90%, 85% 100%, 10% 95%, 0 10% );
+     }
+      span:nth-child(4n +2) {
+      clip-path: polygon(10% 5%, 100% 10%, 90% 100%,0 90%);
+     }
+      span:nth-child(4n +3) {
+      clip-path: polygon( 0 10%, 95% 0, 100% 85%, 85% 100%, 10% 95%);
+     }
+       span:nth-child(4n +4) {
+      clip-path: polygon(5% 0, 100% 5%, 95% 95%, 10% 100%, 0 80% );
+     }
+
+     /*animacion de letras*/
+     @keyframes saltar {
+  0% { transform: translateY(50px) rotate(-10deg); opacity: 0; }
+  100% { transform: translateY(0) rotate(0); opacity: 1; }
+ }
+
+ span {
+  display: inline-block;
+  animation: saltar 0.5s ease-out forwards;
+ }
+
+ span:nth-child(1) { animation-delay: 0.1s; }
+ span:nth-child(2) { animation-delay: 0.2s; }
+ span:nth-child(3) { animation-delay: 0.3s; }
+
+  /*inicio de decoracion*/
+     .letra1{color: red; font-size: 40px; background-color: green; transform: rotate(-5deg) ;}
+      .letra2{color: blue; font-size: 40px; background-color: pink; transform: rotate(-5deg); }
+    .letra3{color: green; font-size: 40px; background-color: aqua; transform: rotate(-5deg);}
+    .letra4{color: greenyellow; font-size: 40px; background-color: gold; transform: rotate(-5deg);}
+    .letra5{color: purple; font-size: 40px; background-color: gray; transform: rotate(-5deg);}
+    .letra6{color: yellow; font-size: 40px; background-color: purple; transform: rotate(-5deg);}
+    .letra7{color: blueviolet; font-size: 40px; background-color: silver; transform: rotate(-5deg);}
+    .letra8{color: cornflowerblue; font-size: 40px; background-color: yellow; transform: rotate(-5deg);}
+    .letra9{color:  orange; font-size: 40px; background-color: greenyellow; transform: rotate(-5deg);} 
+    .letra10{color: orchid; font-size: 40px; background-color: rgb(34, 34, 253); transform: rotate(-5deg);}
+    .letra11{color: ivory; font-size: 40px; background-color: red; transform: rotate(-5deg);}
+    .letra12{color: black; font-size: 40px; background-color: white; transform: rotate(-5deg);}
+    .letra13{color: brown; font-size: 40px; background-color: ivory; transform: rotate(-5deg);}
+    .letra14{color: pink; font-size: 40px; background-color: blue; transform: rotate(-5deg);}
+    .letra15{color: silver; font-size: 40px; background-color: orange; transform: rotate(-5deg);}
+    .letra16{color: gold; font-size: 40px; background-color: blueviolet; transform: rotate(-5deg);}
+    .letra17{color: rgb(213, 216, 40); font-size: 40px; background-color: grey; transform: rotate(-5deg);}
+    .letra18{color: white; font-size: 40px; background-color: black ; transform: rotate(-5deg);}
+    /*segunda parte*/
+      .letra-1{text-shadow: 2px 2px 2px black; color: red; font-size: 40px; background-color: green; transform: rotate(5deg) ;}
+      .letra-2{text-shadow: 2px 2px 2px black; color: blue; font-size: 40px; background-color: pink; transform: rotate(5deg); }
+    .letra-3{text-shadow: 2px 2px 2px black;  color: green; font-size: 40px; background-color: aqua; transform: rotate(5deg);}
+    .letra-4{text-shadow: 2px 2px 2px black; color: greenyellow; font-size: 40px; background-color: gold; transform: rotate(5deg);}
+    .letra-5{text-shadow: 2px 2px 2px black; color: purple; font-size: 40px; background-color: gray; transform: rotate(5deg);}
+    .letra-6{text-shadow: 2px 2px 2px black; color: yellow; font-size: 40px; background-color: purple; transform: rotate(5deg);}
+    .letra-7{text-shadow: 2px 2px 2px black; color: blueviolet; font-size: 40px; background-color: silver; transform: rotate(5deg);}
+    .letra-8{text-shadow: 2px 2px 2px black; color: cornflowerblue; font-size: 40px; background-color: yellow; transform: rotate(5deg);}
+    .letra-9{text-shadow: 2px 2px 2px black; color:  orange; font-size: 40px; background-color: greenyellow; transform: rotate(5deg);} 
+    .letra-11{text-shadow: 2px 2px 2px black; color: ivory; font-size: 40px; background-color: red; transform: rotate(5deg);}
+    .letra-12{text-shadow: 2px 2px 2px white; color: black; font-size: 40px; background-color: white; transform: rotate(5deg);}
+    .letra-13{text-shadow: 2px 2px 2px black; color: brown; font-size: 40px; background-color: ivory; transform: rotate(5deg);}
+    .letra-14{text-shadow: 2px 2px 2px black; color: pink; font-size: 40px; background-color: blue; transform: rotate(5deg);}
+    .letra-15{text-shadow: 2px 2px 2px black; color: silver; font-size: 40px; background-color: orange; transform: rotate(5deg);}
+    .letra-16{text-shadow: 2px 2px 2px black; color: gold; font-size: 40px; background-color: blueviolet; transform: rotate(5deg);}
+    .letra-17{text-shadow: 2px 2px 2px black; color: rgb(213, 216, 40); font-size: 40px; background-color: grey; transform: rotate(5deg);}
+    .letra-18{text-shadow: 2px 2px 2px black; color: white; font-size: 40px; background-color: black ; transform: rotate(5deg);} /*deja vu*/
+    /*final de decoracion*/
+
+    @media (max-width: 480px ) {
+    body {
+        margin-top: 50px;
+      }
+      h1 span {
+        font-size: 1.8rem;
+       }
+      }
+      /*pruebla de jv*/
+    
+  </style>
+</body>
+</html>
+<body>
+ <h1>
+  <span class="letra2">h</span>
+<span class="letra-3">a</span>
+<span class="letra1">o</span>
+<span class="letra4">o</span>
+<span class="letra5">o</span>
+<span class="letra6">o</span>
+<span class="letra7">o</span>
+<span class="letra8">o</span>
+<span class="letra9">o</span>
+<span class="letra10">o</span>
+ </h1>
+
+</body>
+
+</head>
+</html>
